@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="직접 만든 웹게임과 음악을 모은 작품집">
+<title>ZERO° — 작품 모음</title>
+<style>
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #090f18; color: #f0f7fc; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main, footer { width: min(1080px, calc(100% - 40px)); margin: auto; }
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 22px 0; border-bottom: 1px solid #344957; }
+nav { display: flex; gap: 18px; }
+a { color: #a7ecf8; text-underline-offset: .23em; }
+a:focus-visible { outline: 2px solid #a7ecf8; outline-offset: 5px; }
+.hero { padding: clamp(40px, 9vw, 100px) 0 40px; }
+.eyebrow { color: #a7ecf8; letter-spacing: .16em; font-size: .8rem; font-weight: 700; }
+h1 { margin: 8px 0; font-size: clamp(2.8rem, 9vw, 6rem); line-height: 1.05; }
+p { color: #b6c8d7; line-height: 1.65; }
+section { padding: 24px 0; border-top: 1px solid #344957; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 16px; }
+article { display: grid; align-content: start; gap: 8px; padding: 22px; background: #121f30; border: 1px solid #344957; border-radius: 12px; }
+article h3, article p { margin: 0; }
+article a { margin-top: 6px; justify-self: start; padding: 6px 0; }
+footer { padding: 25px 0 40px; border-top: 1px solid #344957; }
+</style>
+</head>
+<body>
+<header>
+  <strong>ZERO° / WORKS</strong>
+  <nav aria-label="작품 분류"><a href="#games">게임</a><a href="#music">음악</a></nav>
+</header>
+<main>
+  <div class="hero">
+    <span class="eyebrow">INDEPENDENT WORKS</span>
+    <h1>나의 작품 모음</h1>
+    <p>직접 만든 웹게임과 음악을 한곳에서 즐겨보세요.</p>
+  </div>
+  <section id="games" aria-labelledby="games-title">
+    <h2 id="games-title">게임</h2>
+    <p><a href="https://yeonsungai27-art.github.io/game/">PIXEL PLAY 아케이드 열기 ↗</a></p>
+    <div class="grid">
+      <article><span class="eyebrow">GAME 01</span><h3>오목 · Grandmaster AI</h3><p>AI와 대결하는 웹 오목.</p><a href="https://yeonsungai27-art.github.io/game/01.html">오목 플레이 ↗</a></article>
+      <article><span class="eyebrow">GAME 02</span><h3>NEON GRID</h3><p>네온 화면에서 즐기는 진화형 틱택토.</p><a href="https://yeonsungai27-art.github.io/game/02.html">NEON GRID 플레이 ↗</a></article>
+      <article><span class="eyebrow">GAME 03</span><h3>NEON SNAKES</h3><p>두 명이 겨루는 뱀 서바이벌.</p><a href="https://yeonsungai27-art.github.io/game/03.html">NEON SNAKES 플레이 ↗</a></article>
+    </div>
+  </section>
+  <section id="music" aria-labelledby="music-title">
+    <h2 id="music-title">음악</h2>
+    <article><span class="eyebrow">MUSIC ARCHIVE</span><h3>BEYOND ZERO°</h3><p>서로 다른 무드의 음악 세 곡을 모은 아카이브.</p><a href="https://yeonsungai27-art.github.io/index..html">음악 아카이브 열기 ↗</a></article>
+  </section>
+</main>
+<footer><a href="https://github.com/yeonsungai27-art?tab=repositories">GitHub에서 공개 저장소 모두 보기 ↗</a></footer>
+</body>
+</html>
