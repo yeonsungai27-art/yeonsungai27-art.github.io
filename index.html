@@ -52,14 +52,42 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
   header, main, footer { width: calc(100% - 28px); }
   .hero { grid-template-columns: 1fr; }
 }
-.game-thumbnail {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  height: auto;
-  object-fit: cover;
-  border-radius: 7px;
+#games .game-card { display: block; padding: 0; min-width: 0; }
+.game-card a { display: block; padding: 0; border-radius: inherit; text-decoration: none; }
+.game-cover {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 9px 9px 0 0;
 }
+.game-thumbnail { display: block; width: 100%; height: 100%; object-fit: cover; }
+.omok-thumbnail { object-position: 50% 35%; }
+.grid-thumbnail { transform: rotate(-4deg) scale(1.12); }
+.game-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 56px;
+  padding: 12px;
+}
+.game-caption h3 { font-size: clamp(.875rem, 1.5vw, 1.05rem); }
+.game-caption span { font-size: .75rem; white-space: nowrap; }
+.game-card a:hover .game-caption span { text-decoration: underline; }
+.snakes-cover {
+  background-color: #172239;
+  background-image: linear-gradient(#ffffff16 1px, transparent 1px), linear-gradient(90deg, #ffffff16 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.snakes-cover span {
+  position: absolute;
+  width: 36%;
+  height: 31%;
+  border-style: solid;
+  border-width: clamp(9px, 1.5vw, 16px);
+}
+.snakes-cover span:first-child { top: 22%; left: 13%; border-color: #8ee9b2; border-right: 0; }
+.snakes-cover span:last-child { right: 13%; bottom: 22%; border-color: #f1a778; border-left: 0; }
 </style>
 </head>
 <body>
@@ -80,9 +108,24 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
     <h2 id="games-title">게임</h2>
     <p><a href="https://yeonsungai27-art.github.io/game/">PIXEL PLAY 아케이드 열기 ↗</a></p>
     <div class="grid">
-      <article><span class="eyebrow">GAME 01</span><h3>오목 · Grandmaster AI</h3><p>AI와 대결하는 웹 오목.</p><a href="https://yeonsungai27-art.github.io/game/01.html">오목 플레이 ↗</a></article>
-      <article><img class="game-thumbnail" src="./neon-grid-thumbnail.jpg" width="1080" height="1080" loading="lazy" alt="보라색 틱택토 판 위에 놓인 노란색 X와 O"><span class="eyebrow">GAME 02</span><h3>NEON GRID</h3><p>네온 화면에서 즐기는 진화형 틱택토.</p><a href="https://yeonsungai27-art.github.io/game/02.html">NEON GRID 플레이 ↗</a></article>
-      <article><span class="eyebrow">GAME 03</span><h3>NEON SNAKES</h3><p>두 명이 겨루는 뱀 서바이벌.</p><a href="https://yeonsungai27-art.github.io/game/03.html">NEON SNAKES 플레이 ↗</a></article>
+      <article class="game-card">
+        <a href="https://yeonsungai27-art.github.io/game/01.html" aria-label="오목 · Grandmaster AI 플레이">
+          <div class="game-cover"><img class="game-thumbnail omok-thumbnail" src="./game/omok-board-photo.jpg" width="1080" height="1920" loading="lazy" alt=""></div>
+          <div class="game-caption"><h3>오목 · Grandmaster AI</h3><span aria-hidden="true">플레이 ↗</span></div>
+        </a>
+      </article>
+      <article class="game-card">
+        <a href="https://yeonsungai27-art.github.io/game/02.html" aria-label="NEON GRID 플레이">
+          <div class="game-cover"><img class="game-thumbnail grid-thumbnail" src="./neon-grid-thumbnail.jpg" width="1080" height="1080" loading="lazy" alt=""></div>
+          <div class="game-caption"><h3>NEON GRID</h3><span aria-hidden="true">플레이 ↗</span></div>
+        </a>
+      </article>
+      <article class="game-card">
+        <a href="https://yeonsungai27-art.github.io/game/03.html" aria-label="NEON SNAKES 플레이">
+          <div class="game-cover snakes-cover" aria-hidden="true"><span></span><span></span></div>
+          <div class="game-caption"><h3>NEON SNAKES</h3><span aria-hidden="true">플레이 ↗</span></div>
+        </a>
+      </article>
     </div>
   </section>
   <section id="music" aria-labelledby="music-title">
