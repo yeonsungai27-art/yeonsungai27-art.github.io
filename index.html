@@ -6,24 +6,61 @@
 <meta name="description" content="직접 만든 웹게임과 음악을 모은 작품집">
 <title>ZERO° — 작품 모음</title>
 <style>
-:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #090f18; color: #f0f7fc; }
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  --navy: #101629;
+  --panel: #171f35;
+  --ink: #f7f2fb;
+  --muted: #c4c3d3;
+  --lavender: #d5c2f6;
+  --line: #363b54;
+  background: var(--navy);
+  color: var(--ink);
+}
 * { box-sizing: border-box; }
 body { margin: 0; }
 header, main, footer { width: min(1080px, calc(100% - 40px)); margin: auto; }
-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 22px 0; border-bottom: 1px solid #344957; }
-nav { display: flex; gap: 18px; }
-a { color: #a7ecf8; text-underline-offset: .23em; }
-a:focus-visible { outline: 2px solid #a7ecf8; outline-offset: 5px; }
-.hero { padding: clamp(40px, 9vw, 100px) 0 40px; }
-.eyebrow { color: #a7ecf8; letter-spacing: .16em; font-size: .8rem; font-weight: 700; }
-h1 { margin: 8px 0; font-size: clamp(2.8rem, 9vw, 6rem); line-height: 1.05; }
-p { color: #b6c8d7; line-height: 1.65; }
-section { padding: 24px 0; border-top: 1px solid #344957; }
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 22px 0; }
+header strong { letter-spacing: .08em; }
+nav { display: flex; gap: 24px; }
+a { color: var(--lavender); text-underline-offset: .25em; }
+a:hover { color: var(--ink); }
+a:focus-visible { outline: 2px solid var(--lavender); outline-offset: 4px; }
+.hero {
+  display: grid;
+  align-content: end;
+  min-height: clamp(340px, 48vw, 510px);
+  margin-bottom: clamp(30px, 6vw, 64px);
+  padding: clamp(26px, 6vw, 68px);
+  border-radius: 14px;
+  background-color: var(--panel);
+  background-image: linear-gradient(90deg, #171f35 12%, #171f35f5 31%, #171f3555 67%, #171f3500 90%), url('./afternoon-train.jpg');
+  background-size: 100% 100%, max(72%, 570px) auto;
+  background-position: center, right 41%;
+  background-repeat: no-repeat;
+}
+.eyebrow { color: var(--lavender); letter-spacing: .11em; font-size: .75rem; font-weight: 700; }
+h1 { margin: 12px 0 0; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1.12; letter-spacing: -.055em; word-break: keep-all; }
+p { color: var(--muted); line-height: 1.65; }
+.hero p { margin: 14px 0 0; color: var(--ink); }
+section { padding: 28px 0 36px; border-top: 1px solid var(--line); }
+h2 { margin: 0; font-size: 1.65rem; letter-spacing: -.03em; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 16px; }
-article { display: grid; align-content: start; gap: 8px; padding: 22px; background: #121f30; border: 1px solid #344957; border-radius: 12px; }
+article { display: grid; align-content: start; gap: 10px; min-width: 0; padding: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
 article h3, article p { margin: 0; }
-article a { margin-top: 6px; justify-self: start; padding: 6px 0; }
-footer { padding: 25px 0 40px; border-top: 1px solid #344957; }
+article a { justify-self: start; padding: 6px 0; }
+#music .grid + article { margin-top: 16px; }
+footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
+@media (max-width: 600px) {
+  header, main, footer { width: calc(100% - 28px); }
+  .hero {
+    min-height: 405px;
+    background-image: linear-gradient(0deg, #171f35 7%, #171f35f5 23%, #171f3500 66%), url('./afternoon-train.jpg');
+    background-size: 100% 100%, cover;
+    background-position: center, 70% 34%;
+  }
+}
 </style>
 </head>
 <body>
