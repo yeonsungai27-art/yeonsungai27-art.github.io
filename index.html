@@ -18,7 +18,8 @@
 body { margin: 0; }
 header, main, footer { width: min(1080px, calc(100% - 40px)); margin: auto; }
 header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 22px 0; }
-header strong { letter-spacing: .08em; }
+header .site-logo { display: block; }
+header .site-logo img { display: block; width: clamp(120px, 14vw, 155px); height: auto; }
 nav { display: flex; gap: 24px; }
 a { color: var(--navy); text-decoration-thickness: 2px; text-underline-offset: .25em; }
 a:hover { text-decoration-thickness: 3px; }
@@ -154,7 +155,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
 </head>
 <body>
 <header>
-  <strong>ZERO° / WORKS</strong>
+  <a class="site-logo" href="./"><img src="./zero-logo.png" width="534" height="131" alt="ZERO° 홈"></a>
   <nav aria-label="작품 분류"><a href="#games">게임</a><a href="#music">음악</a></nav>
 </header>
 <main>
