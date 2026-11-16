@@ -10,14 +10,9 @@
   color-scheme: light;
   font-family: system-ui, sans-serif;
   --navy: #101629;
-  --panel: #fdf9f1;
-  --ink: var(--navy);
-  --muted: #424b60;
-  --lavender: #bda6df;
-  --lavender-ink: #5c497b;
   --line: #ded5c6;
-  background: #f6f0e5;
-  color: var(--ink);
+  background: #fff8eb;
+  color: var(--navy);
 }
 * { box-sizing: border-box; }
 body { margin: 0; }
@@ -25,42 +20,37 @@ header, main, footer { width: min(1080px, calc(100% - 40px)); margin: auto; }
 header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 22px 0; }
 header strong { letter-spacing: .08em; }
 nav { display: flex; gap: 24px; }
-a { color: var(--navy); text-decoration-color: var(--lavender); text-decoration-thickness: 2px; text-underline-offset: .25em; }
-a:hover { color: var(--lavender-ink); }
-a:focus-visible { outline: 2px solid var(--lavender-ink); outline-offset: 4px; }
+a { color: var(--navy); text-decoration-thickness: 2px; text-underline-offset: .25em; }
+a:hover { text-decoration-thickness: 3px; }
+a:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
 .hero {
   display: grid;
-  align-content: end;
-  min-height: clamp(340px, 48vw, 510px);
-  margin-bottom: clamp(30px, 6vw, 64px);
-  padding: clamp(26px, 6vw, 68px);
-  border-radius: 14px;
-  background-color: #f2e9da;
-  background-image: linear-gradient(90deg, #f2e9da 28%, #f2e9daf5 40%, #f2e9da45 66%, #f2e9da00 86%), url('./afternoon-train.jpg');
-  background-size: 100% 100%, max(72%, 570px) auto;
-  background-position: center, right 41%;
-  background-repeat: no-repeat;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 60px);
+  margin: clamp(16px, 3vw, 34px) 0 clamp(36px, 6vw, 64px);
 }
-.eyebrow { color: var(--lavender-ink); letter-spacing: .11em; font-size: .75rem; font-weight: 700; }
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.eyebrow { color: var(--navy); letter-spacing: .11em; font-size: .75rem; font-weight: 700; }
 h1 { margin: 12px 0 0; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1.12; letter-spacing: -.055em; word-break: keep-all; }
-p { color: var(--muted); line-height: 1.65; }
-.hero p { margin: 14px 0 0; color: var(--ink); }
+p { line-height: 1.65; }
+.hero p { margin: 14px 0 0; }
 section { padding: 28px 0 36px; border-top: 1px solid var(--line); }
 h2 { margin: 0; font-size: 1.65rem; letter-spacing: -.03em; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 16px; }
-article { display: grid; align-content: start; gap: 10px; min-width: 0; padding: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; }
+article { display: grid; align-content: start; gap: 10px; min-width: 0; padding: 22px; border: 1px solid var(--line); border-radius: 10px; }
 article h3, article p { margin: 0; }
 article a { justify-self: start; padding: 6px 0; }
 #music .grid + article { margin-top: 16px; }
 footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
 @media (max-width: 600px) {
   header, main, footer { width: calc(100% - 28px); }
-  .hero {
-    min-height: 405px;
-    background-image: linear-gradient(0deg, #f2e9da 14%, #f2e9daf5 34%, #f2e9da00 66%), url('./afternoon-train.jpg');
-    background-size: 100% 100%, cover;
-    background-position: center, 70% 34%;
-  }
+  .hero { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -71,9 +61,12 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
 </header>
 <main>
   <div class="hero">
-    <span class="eyebrow">INDEPENDENT WORKS</span>
-    <h1>나의 작품 모음</h1>
-    <p>직접 만든 웹게임과 음악을 한곳에서 즐겨보세요.</p>
+    <div class="hero-copy">
+      <span class="eyebrow">INDEPENDENT WORKS</span>
+      <h1>나의 작품 모음</h1>
+      <p>직접 만든 웹게임과 음악을 한곳에서 즐겨보세요.</p>
+    </div>
+    <img src="./afternoon-train.jpg" width="1536" height="1024" alt="오후 햇살이 드는 전철 안과 창밖으로 보이는 푸른 풍경">
   </div>
   <section id="games" aria-labelledby="games-title">
     <h2 id="games-title">게임</h2>
