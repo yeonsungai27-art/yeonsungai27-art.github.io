@@ -251,12 +251,19 @@ nav { flex-wrap: wrap; }
 #board [hidden] {display:none!important;}
 #board #receipt-url {overflow-wrap:anywhere;}
 #board #status {white-space:pre-line;}
+.message-entry {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;padding:22px;border:1px solid var(--line);border-radius:10px;background:#f4ead8;margin-bottom:30px;}
+.message-entry strong {font-size:1.2rem;}
+.message-entry p {margin:4px 0 0;font-size:.9rem;}
+.message-entry-actions {display:flex;flex-wrap:wrap;gap:10px;}
+.message-link {display:inline-block;padding:10px 16px;border:1px solid var(--navy);border-radius:7px;background:var(--navy);color:#fff8eb;text-decoration:none;font-weight:650;}
+.message-link-secondary {background:transparent;color:var(--navy);}
+.message-link:hover {text-decoration:underline;}
 </style>
 </head>
 <body>
 <header>
   <a class="site-logo" href="./"><img src="./zero-logo.png" width="534" height="131" alt="ZERO° 홈"></a>
-  <nav aria-label="작품 분류"><a href="#games">게임</a><a href="#music">음악</a><a href="#board">게시판</a></nav>
+  <nav aria-label="작품 분류"><a href="#games">게임</a><a href="#music">음악</a><a href="#board">게시판</a><a href="https://zero-private-messages.treasuredpaint.chatgpt.site/admin">메시지함</a></nav>
 </header>
 <main>
   <div class="hero">
@@ -267,6 +274,10 @@ nav { flex-wrap: wrap; }
     </div>
     <img src="./afternoon-train.jpg" width="1536" height="1024" alt="오후 햇살이 드는 전철 안과 창밖으로 보이는 푸른 풍경">
   </div>
+  <aside class="message-entry" aria-label="메시지 게시판">
+    <div><strong>메시지 게시판</strong><p>운영자에게 글을 남기고 답변을 받아보세요.</p></div>
+    <div class="message-entry-actions"><a class="message-link" href="#board">글 남기기</a><a class="message-link message-link-secondary" href="https://zero-private-messages.treasuredpaint.chatgpt.site/admin">운영자 메시지함 ↗</a></div>
+  </aside>
   <section id="games" aria-labelledby="games-title">
     <h2 id="games-title">게임</h2>
     <p><a href="https://yeonsungai27-art.github.io/game/">PIXEL PLAY 아케이드 열기 ↗</a></p>
@@ -340,7 +351,7 @@ nav { flex-wrap: wrap; }
       style="display: block; width: min(100%, 360px); height: auto; aspect-ratio: 9 / 16; border: 0; border-radius: 8px"></iframe>
     <p><a href="https://youtube.com/shorts/y0saYl1GTTA?feature=share">YouTube에서 보기 ↗</a></p>
   </section>
-  <section id="board" aria-labelledby="board-title"><span class="eyebrow">PRIVATE MESSAGE</span><h2 id="board-title">운영자에게 글 남기기</h2><p>작품에 대한 감상, 질문, 제안을 보내주세요.<br>보낸 글은 운영자만 확인하며, 다른 방문자에게 공개되지 않습니다.</p><form id="send-form"><label>이름 또는 닉네임<input name="author" maxlength="40" required autocomplete="nickname" placeholder="어떤 이름으로 불러드릴까요?"></label><label>내용<textarea name="body" maxlength="5000" required placeholder="운영자에게 전할 이야기를 적어주세요."></textarea></label><label class="trap" aria-hidden="true">웹사이트<input name="website" tabindex="-1" autocomplete="off"></label><p class="muted">입력한 이름은 본인 인증된 이름이 아닙니다. 비밀번호 등 민감한 정보는 적지 마세요.</p><button type="submit">보내기</button><p id="status" role="status" aria-live="polite"></p></form><section id="receipt" class="panel" hidden><h2>메시지를 보냈습니다.</h2><p>아래 링크에서 보낸 글과 운영자의 답변을 확인할 수 있습니다. 링크를 저장해주세요.</p><p class="notice">이 링크를 가진 사람은 메시지를 볼 수 있습니다. 다른 사람에게 공유하지 마세요.</p><a id="receipt-url"></a><p><button id="copy" type="button">확인 링크 복사</button></p></section><p class="board-note">답변은 전송 후 발급되는 확인 링크에서 볼 수 있습니다.</p><p><a href="https://zero-private-messages.treasuredpaint.chatgpt.site/admin">운영자 메시지함 ↗</a></p></section>
+  <section id="board" aria-labelledby="board-title"><span class="eyebrow">PRIVATE MESSAGE</span><h2 id="board-title">운영자에게 글 남기기</h2><p>작품에 대한 감상, 질문, 제안을 보내주세요.<br>보낸 글은 운영자만 확인하며, 다른 방문자에게 공개되지 않습니다.</p><form id="send-form"><label>이름 또는 닉네임<input name="author" maxlength="40" required autocomplete="nickname" placeholder="어떤 이름으로 불러드릴까요?"></label><label>내용<textarea name="body" maxlength="5000" required placeholder="운영자에게 전할 이야기를 적어주세요."></textarea></label><label class="trap" aria-hidden="true">웹사이트<input name="website" tabindex="-1" autocomplete="off"></label><p class="muted">입력한 이름은 본인 인증된 이름이 아닙니다. 비밀번호 등 민감한 정보는 적지 마세요.</p><button type="submit">보내기</button><p id="status" role="status" aria-live="polite"></p></form><section id="receipt" class="panel" hidden><h2>메시지를 보냈습니다.</h2><p>아래 링크에서 보낸 글과 운영자의 답변을 확인할 수 있습니다. 링크를 저장해주세요.</p><p class="notice">이 링크를 가진 사람은 메시지를 볼 수 있습니다. 다른 사람에게 공유하지 마세요.</p><a id="receipt-url"></a><p><button id="copy" type="button">확인 링크 복사</button></p></section><p class="board-note">답변은 전송 후 발급되는 확인 링크에서 볼 수 있습니다.</p><p><a class="message-link message-link-secondary" href="https://zero-private-messages.treasuredpaint.chatgpt.site/admin">운영자 메시지함 열기 ↗</a></p></section>
 </main>
 <footer><a href="https://github.com/yeonsungai27-art?tab=repositories">GitHub에서 공개 저장소 모두 보기 ↗</a></footer>
 <script src="./board.js" defer></script>
