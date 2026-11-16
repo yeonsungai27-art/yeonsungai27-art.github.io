@@ -137,6 +137,19 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
   border-radius: 4px;
   font-size: .75rem;
 }
+.music-player-label { background: var(--player-button, #101629); color: #fffaf2; }
+.music-player summary:hover .music-player-label { box-shadow: 0 0 0 1px #fffaf2; }
+.music-track .music-player[open] + .music-external {
+  position: static;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-top: 7px;
+  padding: 0;
+  clip-path: none;
+  overflow: visible;
+  font-size: .72rem;
+}
 </style>
 </head>
 <body>
@@ -182,7 +195,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
     <p>재생 버튼을 눌러 이 페이지에서 바로 들어보세요.</p>
     <div class="grid">
       <div class="music-track">
-        <details class="music-player">
+        <details class="music-player" style="--player-button: #174353">
           <summary>
             <img src="./neon-beon-cover.jpg" width="1536" height="1024" alt="" loading="lazy">
             <span class="music-player-label"><strong>니온앤비온</strong><span class="music-player-open">▶ 재생기 열기</span><span class="music-player-close">재생기 접기</span></span>
@@ -192,7 +205,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
         <a class="music-external" href="https://suno.com/s/H0R9I1YGjvfdmRvw">Suno에서 니온앤비온 열기 ↗</a>
       </div>
       <div class="music-track">
-        <details class="music-player">
+        <details class="music-player" style="--player-button: #324f65">
           <summary>
             <img src="./happy-day-cover.jpg" width="1536" height="1024" alt="" loading="lazy">
             <span class="music-player-label"><strong>행복한 날</strong><span class="music-player-open">▶ 재생기 열기</span><span class="music-player-close">재생기 접기</span></span>
@@ -202,7 +215,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
         <a class="music-external" href="https://suno.com/s/4jGgCTSnwkrR3FJh">Suno에서 행복한 날 열기 ↗</a>
       </div>
       <div class="music-track">
-        <details class="music-player">
+        <details class="music-player" style="--player-button: #644236">
           <summary>
             <img src="./all-day-cover.jpg" width="1536" height="1024" alt="" loading="lazy">
             <span class="music-player-label"><strong>하루 종일</strong><span class="music-player-open">▶ 재생기 열기</span><span class="music-player-close">재생기 접기</span></span>
