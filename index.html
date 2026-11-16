@@ -74,20 +74,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
 .game-caption h3 { font-size: clamp(.875rem, 1.5vw, 1.05rem); }
 .game-caption span { font-size: .75rem; white-space: nowrap; }
 .game-card a:hover .game-caption span { text-decoration: underline; }
-.snakes-cover {
-  background-color: #172239;
-  background-image: linear-gradient(#ffffff16 1px, transparent 1px), linear-gradient(90deg, #ffffff16 1px, transparent 1px);
-  background-size: 16px 16px;
-}
-.snakes-cover span {
-  position: absolute;
-  width: 36%;
-  height: 31%;
-  border-style: solid;
-  border-width: clamp(9px, 1.5vw, 16px);
-}
-.snakes-cover span:first-child { top: 22%; left: 13%; border-color: #8ee9b2; border-right: 0; }
-.snakes-cover span:last-child { right: 13%; bottom: 22%; border-color: #f1a778; border-left: 0; }
+.snake-thumbnail { object-position: 50% 22%; }
 </style>
 </head>
 <body>
@@ -122,7 +109,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
       </article>
       <article class="game-card">
         <a href="https://yeonsungai27-art.github.io/game/03.html" aria-label="NEON SNAKES 플레이">
-          <div class="game-cover snakes-cover" aria-hidden="true"><span></span><span></span></div>
+          <div class="game-cover"><img class="game-thumbnail snake-thumbnail" src="./snake-cover.jpg" width="736" height="883" loading="lazy" alt=""></div>
           <div class="game-caption"><h3>NEON SNAKES</h3><span aria-hidden="true">플레이 ↗</span></div>
         </a>
       </article>
