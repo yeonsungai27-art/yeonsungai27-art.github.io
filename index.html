@@ -52,6 +52,14 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
   header, main, footer { width: calc(100% - 28px); }
   .hero { grid-template-columns: 1fr; }
 }
+.game-thumbnail {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  object-fit: cover;
+  border-radius: 7px;
+}
 </style>
 </head>
 <body>
@@ -73,7 +81,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
     <p><a href="https://yeonsungai27-art.github.io/game/">PIXEL PLAY 아케이드 열기 ↗</a></p>
     <div class="grid">
       <article><span class="eyebrow">GAME 01</span><h3>오목 · Grandmaster AI</h3><p>AI와 대결하는 웹 오목.</p><a href="https://yeonsungai27-art.github.io/game/01.html">오목 플레이 ↗</a></article>
-      <article><span class="eyebrow">GAME 02</span><h3>NEON GRID</h3><p>네온 화면에서 즐기는 진화형 틱택토.</p><a href="https://yeonsungai27-art.github.io/game/02.html">NEON GRID 플레이 ↗</a></article>
+      <article><img class="game-thumbnail" src="./neon-grid-thumbnail.jpg" width="1080" height="1080" loading="lazy" alt="보라색 틱택토 판 위에 놓인 노란색 X와 O"><span class="eyebrow">GAME 02</span><h3>NEON GRID</h3><p>네온 화면에서 즐기는 진화형 틱택토.</p><a href="https://yeonsungai27-art.github.io/game/02.html">NEON GRID 플레이 ↗</a></article>
       <article><span class="eyebrow">GAME 03</span><h3>NEON SNAKES</h3><p>두 명이 겨루는 뱀 서바이벌.</p><a href="https://yeonsungai27-art.github.io/game/03.html">NEON SNAKES 플레이 ↗</a></article>
     </div>
   </section>
