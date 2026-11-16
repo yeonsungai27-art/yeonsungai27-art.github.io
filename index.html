@@ -177,6 +177,64 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
   overflow: visible;
   font-size: .72rem;
 }
+
+/* Keep the game and music lists easy to scan while preserving their controls. */
+#games > .grid, #music > .grid {
+  display: block;
+  border-top: 1px solid var(--line);
+}
+#games .game-card, #music .music-track {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+}
+#games .game-card a, #music .music-player summary {
+  display: grid;
+  grid-template-columns: clamp(72px, 13vw, 125px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(10px, 2vw, 22px);
+  padding: 12px 8px;
+  border-radius: 0;
+}
+#games .game-cover { border-radius: 6px; }
+#games .game-caption { min-height: 0; padding: 0; }
+#games .game-caption h3 { overflow-wrap: anywhere; }
+#music .music-player summary {
+  aspect-ratio: auto;
+  background: transparent;
+  color: var(--navy);
+}
+#music .music-player summary::after { content: none; }
+#music .music-player img {
+  position: static;
+  display: block;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+}
+#music .music-player-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  justify-self: stretch;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--navy);
+}
+#music .music-player-label > span {
+  flex: none;
+  padding: 5px 9px;
+  border-radius: 5px;
+  color: #fffaf2;
+  background: var(--player-button, var(--navy));
+  font-size: .72rem;
+}
+#music .music-player summary:hover .music-player-label { box-shadow: none; }
+#music .music-track iframe { display: block; max-width: 540px; margin: 0 0 10px; }
+#music .music-track .music-player[open] + .music-external { margin: 0 0 10px; }
+#games .game-card a:hover, #music .music-player summary:hover { background: #f4ead8; }
 </style>
 </head>
 <body>
@@ -188,7 +246,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
   <div class="hero">
     <div class="hero-copy">
       <span class="eyebrow">INDEPENDENT WORKS</span>
-      <h1>나의 작품 모음</h1>
+      <h1>작품 게시판</h1>
       <p>직접 만든 웹게임과 음악을 한곳에서 즐겨보세요.</p>
     </div>
     <img src="./afternoon-train.jpg" width="1536" height="1024" alt="오후 햇살이 드는 전철 안과 창밖으로 보이는 푸른 풍경">
