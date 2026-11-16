@@ -46,20 +46,18 @@ a:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
   object-position: center 48%;
   z-index: -1;
 }
-.hero-copy {
-  position: relative;
-  isolation: isolate;
-  max-width: 100%;
-  padding: clamp(16px, 3vw, 32px);
-}
-.hero-copy::before {
+.hero::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  border-radius: 12px;
-  background: linear-gradient(100deg, #fff8ebed 0%, #fff8ebd9 76%, #fff8ebbd 100%);
-  backdrop-filter: blur(6px);
+  pointer-events: none;
+  background: linear-gradient(90deg, #101629bc 0%, #10162991 39%, #10162930 62%, transparent 82%);
+}
+.hero-copy {
+  max-width: 100%;
+  color: #fff;
+  text-shadow: 0 2px 12px #070b17b3;
 }
 .eyebrow { color: var(--navy); letter-spacing: .11em; font-size: .75rem; font-weight: 700; }
 h1 { margin: 12px 0 0; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1.12; letter-spacing: -.055em; word-break: keep-all; }
@@ -77,6 +75,7 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
   header, main, footer { width: calc(100% - 28px); }
   .hero { min-height: 330px; align-items: end; }
   .hero img { object-position: 63% center; }
+  .hero::after { background: linear-gradient(0deg, #101629e8, #1016298c 43%, transparent 82%); }
   .hero h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
 }
 #games .game-card { display: block; padding: 0; min-width: 0; }
