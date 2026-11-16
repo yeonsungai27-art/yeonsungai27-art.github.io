@@ -114,6 +114,29 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
 }
 .music-player:not([open]) .music-player-close, .music-player[open] .music-player-open { display: none; }
 .music-player iframe { display: block; margin-top: 10px; }
+.music-track { position: relative; min-width: 0; }
+.music-track > iframe { display: block; }
+.music-player-label { display: grid; gap: 3px; border-radius: 8px; }
+.music-player-label strong { font-size: 1rem; }
+.music-external:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.music-external:focus {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 2;
+  background: #fff8eb;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: .75rem;
+}
 </style>
 </head>
 <body>
@@ -158,27 +181,24 @@ footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
     <h2 id="music-title">음악</h2>
     <p>재생 버튼을 눌러 이 페이지에서 바로 들어보세요.</p>
     <div class="grid">
-      <article>
-        <h3>니온앤비온</h3>
+      <div class="music-track">
         <details class="music-player">
           <summary>
             <img src="./neon-beon-cover.jpg" width="1536" height="1024" alt="" loading="lazy">
-            <span class="music-player-label"><span class="music-player-open">▶ 재생기 열기</span><span class="music-player-close">재생기 접기</span></span>
+            <span class="music-player-label"><strong>니온앤비온</strong><span class="music-player-open">▶ 재생기 열기</span><span class="music-player-close">재생기 접기</span></span>
           </summary>
           <iframe title="니온앤비온 재생" src="https://suno.com/embed/2019a760-1bf8-4d98-9e5d-8ee009673e99" width="100%" height="140" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" style="border: 0; border-radius: 8px"></iframe>
         </details>
-        <a href="https://suno.com/s/H0R9I1YGjvfdmRvw">Suno에서 니온앤비온 열기 ↗</a>
-      </article>
-      <article>
-        <h3>행복한 날</h3>
+        <a class="music-external" href="https://suno.com/s/H0R9I1YGjvfdmRvw">Suno에서 니온앤비온 열기 ↗</a>
+      </div>
+      <div class="music-track">
         <iframe title="행복한 날 재생" src="https://suno.com/embed/c9e98bd3-45b9-42a6-9e78-d22071755870" width="100%" height="140" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" style="border: 0; border-radius: 8px"></iframe>
-        <a href="https://suno.com/s/4jGgCTSnwkrR3FJh">Suno에서 행복한 날 열기 ↗</a>
-      </article>
-      <article>
-        <h3>하루 종일</h3>
+        <a class="music-external" href="https://suno.com/s/4jGgCTSnwkrR3FJh">Suno에서 행복한 날 열기 ↗</a>
+      </div>
+      <div class="music-track">
         <iframe title="하루 종일 재생" src="https://suno.com/embed/c26307bb-93f6-419c-be5b-fc388326cec2" width="100%" height="140" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" style="border: 0; border-radius: 8px"></iframe>
-        <a href="https://suno.com/s/9qtXiBr1Lt25OWPK">Suno에서 하루 종일 열기 ↗</a>
-      </article>
+        <a class="music-external" href="https://suno.com/s/9qtXiBr1Lt25OWPK">Suno에서 하루 종일 열기 ↗</a>
+      </div>
     </div>
     <article><span class="eyebrow">MUSIC ARCHIVE</span><h3>BEYOND ZERO°</h3><p>서로 다른 무드의 음악 세 곡을 모은 아카이브.</p><a href="https://yeonsungai27-art.github.io/index..html">음악 아카이브 열기 ↗</a></article>
   </section>
