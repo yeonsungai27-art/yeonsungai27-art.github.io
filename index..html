@@ -1,19 +1,234 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090f18">
-<title>ZERO° — MUSIC ARCHIVE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="서로 다른 무드의 음악 세 곡을 한곳에서 들어보세요.">
+<title>BEYOND ZERO° — 음악 아카이브</title>
 <style>
-:root{--bg:#080e17;--white:#eef7fd;--muted:#93a7b7;--edge:#334656;--ice:#9bdff1;--hi:#dffaff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,'Malgun Gothic',sans-serif;min-height:100vh;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(126deg,transparent 0 47%,#21415411 47.05% 47.13%,transparent 47.2%),linear-gradient(100deg,#0b1724 0%,#070d16 62%,#132433 100%)}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1320px;margin:auto;padding:0 32px}.top{height:79px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--edge)}.brand{display:flex;align-items:center;gap:13px;font-weight:900;letter-spacing:.15em;font-size:17px}.mark{width:33px;height:33px;border:1px solid var(--ice);display:grid;place-items:center;color:var(--ice);clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}.top-right{font-size:11px;letter-spacing:.18em;color:var(--muted)}.top-right span{color:var(--ice)}.hero{padding:95px 0 76px;display:grid;grid-template-columns:1fr 210px;gap:20px;position:relative}.eyebrow{color:var(--ice);font-weight:700;font-size:11px;letter-spacing:.35em}.hero h1{font-size:clamp(66px,11vw,158px);margin:17px 0 12px;letter-spacing:-.09em;line-height:.85;font-weight:850}.hero h1 sup{font-size:.3em;vertical-align:top;margin-left:12px;color:var(--ice);letter-spacing:0}.hero p{color:var(--muted);max-width:490px;font-size:15px;line-height:1.9;margin:29px 0 0}.hero-art{display:flex;align-items:center;justify-content:center;min-height:240px}.crystal{width:166px;height:215px;clip-path:polygon(47% 0,89% 28%,100% 68%,53% 100%,14% 79%,0 34%);background:linear-gradient(132deg,#eaffff 0%,#7ab7d2 9%,#143249 31%,#8fbed7 32%,#203f56 48%,#d3f4ff 49%,#26455f 68%,#a1d9eb 84%,#0b2032);filter:drop-shadow(0 0 25px #77dafa33);transform:rotate(-10deg)}.crystal:after{content:"";display:block;width:100%;height:100%;background:linear-gradient(60deg,transparent 44%,#d7f8ff55 44.2% 44.8%,transparent 45%)}.rule{border:0;height:1px;background:var(--edge);margin:0}.section-head{display:flex;justify-content:space-between;align-items:end;padding:28px 0 21px;gap:15px}.section-head h2{font-size:14px;letter-spacing:.21em;margin:0}.section-head p{font-size:11px;color:var(--muted);letter-spacing:.14em;margin:0}.tracks{border-top:1px solid var(--edge)}.track{display:grid;grid-template-columns:65px 124px minmax(0,1fr) 95px 145px;align-items:center;gap:25px;padding:25px 18px 25px 4px;border-bottom:1px solid var(--edge);position:relative;transition:background .2s}.track:hover{background:#17283888}.track:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--ice);transform:scaleY(0);transition:transform .2s}.track:hover:before{transform:scaleY(1)}.number{font-weight:800;font-size:13px;color:#7892a7;letter-spacing:.11em}.artwork{width:124px;height:100px;border:1px solid #4b6c7f;position:relative;overflow:hidden;background:#102337;clip-path:polygon(0 0,100% 0,100% 82%,86% 100%,0 100%)}.artwork:before,.artwork:after{content:"";position:absolute;inset:0}.art1:before{background:repeating-linear-gradient(122deg,transparent 0 13px,#b1eaff40 14px 15px,transparent 16px 30px),linear-gradient(45deg,#101c2c,#5e91b0)}.art1:after{inset:19px 35px;transform:skew(-18deg) rotate(20deg);border:1px solid #defaff;background:#a6dff022}.art2:before{background:radial-gradient(ellipse at 70% 38%,#c7f8ff 0 2px,transparent 3px),linear-gradient(145deg,#07111f 40%,#46839c)}.art2:after{inset:14px 27px;border-left:1px solid #c4f4ff;border-right:1px solid #89ccdf;transform:skew(-30deg)}.art3:before{background:linear-gradient(130deg,transparent 41%,#bee8ff 41.3% 43%,transparent 43.2%),linear-gradient(60deg,#0b1524,#6590a9 55%,#101b2c)}.art3:after{inset:22px;transform:rotate(45deg);border:1px solid #ccf5ff}.meta{min-width:0}.kind{font-size:10px;color:var(--ice);letter-spacing:.25em;font-weight:800}.name{font-size:clamp(19px,2.6vw,28px);font-weight:750;margin:9px 0 7px;letter-spacing:-.035em}.sub{font-size:12px;color:var(--muted)}.time{font-size:11px;color:#829bac;letter-spacing:.11em;text-align:right}.play{display:flex;justify-content:center;gap:9px;align-items:center;border:1px solid #759fb5;background:transparent;color:var(--white);padding:15px 16px;font-size:11px;letter-spacing:.13em;font-weight:800;white-space:nowrap;transition:.18s}.play:hover,.play:focus-visible{background:var(--ice);color:#091621;border-color:var(--ice);outline:none}.play svg{width:13px;height:13px;fill:currentColor}.end{display:flex;justify-content:space-between;gap:15px;padding:38px 0 50px;color:#7f95a5;font-size:11px;letter-spacing:.14em}.line-label{display:flex;align-items:center;gap:12px}.line-label:before{content:"";display:block;width:30px;height:1px;background:var(--ice)}@media(max-width:750px){.wrap{padding:0 18px}.top{height:67px}.top-right{font-size:9px}.hero{grid-template-columns:1fr 100px;padding:68px 0 56px}.hero-art{min-height:170px}.crystal{width:85px;height:135px}.hero h1{font-size:clamp(55px,12vw,90px)}.hero p{font-size:13px}.track{grid-template-columns:30px 83px minmax(0,1fr);gap:12px;padding:20px 0}.artwork{width:83px;height:83px}.time{display:none}.play{grid-column:3;justify-self:start;margin-top:0;padding:11px 16px}.name{font-size:19px}.sub{font-size:11px}.section-head p{display:none}}@media(max-width:400px){.hero{grid-template-columns:1fr}.hero-art{position:absolute;right:0;top:58px;opacity:.22}.hero h1{font-size:68px}.track{grid-template-columns:24px 70px 1fr}.artwork{width:70px;height:76px}.kind{font-size:9px}.name{font-size:17px}.end{font-size:9px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
-</style></head><body>
-<div class="wrap">
-<header class="top"><div class="brand"><div class="mark">✳</div><span>ZERO° / MUSIC</span></div><div class="top-right">INDEPENDENT AUDIO ARCHIVE <span>— 003 TRACKS</span></div></header>
-<main><section class="hero"><div><div class="eyebrow">CURATED SOUND / NO BOUNDARIES</div><h1>BEYOND<br>ZERO<sup>°</sup></h1><p>차가운 형태, 자유로운 사운드.<br>서로 다른 무드의 음악을 하나의 공간에 기록합니다.</p></div><div class="hero-art" aria-hidden="true"><div class="crystal"></div></div></section><hr class="rule">
-<section id="collection" aria-label="음악 컬렉션"><div class="section-head"><h2>01 / THE COLLECTION</h2><p>SELECT A TRACK TO LISTEN ↗</p></div>
-<div class="tracks">
-<article class="track"><div class="number">01</div><div class="artwork art1" aria-hidden="true"></div><div class="meta"><div class="kind">SOUND / 001</div><div class="name">Untitled 001</div><div class="sub">Independent release · Suno</div></div><div class="time">TRACK 01</div><a class="play" href="https://suno.com/s/e1xUoeqvUwusXxDm" target="_blank" rel="noopener noreferrer" aria-label="첫 번째 음악 Suno에서 듣기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18l14-9z"/></svg> LISTEN ↗</a></article>
-<article class="track"><div class="number">02</div><div class="artwork art2" aria-hidden="true"></div><div class="meta"><div class="kind">SOUND / 002</div><div class="name">Untitled 002</div><div class="sub">Independent release · Suno</div></div><div class="time">TRACK 02</div><a class="play" href="https://suno.com/s/9qtXiBr1Lt25OWPK" target="_blank" rel="noopener noreferrer" aria-label="두 번째 음악 Suno에서 듣기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18l14-9z"/></svg> LISTEN ↗</a></article>
-<article class="track"><div class="number">03</div><div class="artwork art3" aria-hidden="true"></div><div class="meta"><div class="kind">SOUND / 003</div><div class="name">Untitled 003</div><div class="sub">Independent release · Suno</div></div><div class="time">TRACK 03</div><a class="play" href="https://suno.com/s/H0R9I1YGjvfdmRvw" target="_blank" rel="noopener noreferrer" aria-label="세 번째 음악 Suno에서 듣기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18l14-9z"/></svg> LISTEN ↗</a></article>
-</div></section></main>
-<footer class="end"><span class="line-label">ZERO° — MUSIC ARCHIVE</span><span>THREE TRACKS. NO SINGLE GENRE.</span></footer>
-</div></body></html>
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  --navy: #101629;
+  --line: #ded5c6;
+  background: #fff8eb;
+  color: var(--navy);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main, footer { width: min(1080px, calc(100% - 40px)); margin: auto; }
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 22px 0; }
+header .site-logo { display: block; }
+header .site-logo img { display: block; width: clamp(96px, 11vw, 122px); height: auto; }
+nav { display: flex; gap: 24px; }
+a { color: var(--navy); text-decoration-thickness: 2px; text-underline-offset: .25em; }
+a:hover { text-decoration-thickness: 3px; }
+a:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  min-height: clamp(360px, 44vw, 510px);
+  margin: clamp(16px, 3vw, 34px) 0 clamp(36px, 6vw, 64px);
+  padding: clamp(18px, 4vw, 44px);
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eee2ce;
+}
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  z-index: -1;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(90deg, #101629bc 0%, #10162991 39%, #10162930 62%, transparent 82%);
+}
+.hero-copy {
+  max-width: 100%;
+  color: #fff;
+  text-shadow: 0 2px 12px #070b17b3;
+}
+.hero .eyebrow { color: inherit; }
+.eyebrow { color: var(--navy); letter-spacing: .11em; font-size: .75rem; font-weight: 700; }
+h1 { margin: 12px 0 0; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1.12; letter-spacing: -.055em; word-break: keep-all; }
+p { line-height: 1.65; }
+.hero p { margin: 14px 0 0; }
+section { padding: 28px 0 36px; border-top: 1px solid var(--line); }
+h2 { margin: 0; font-size: 1.65rem; letter-spacing: -.03em; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 16px; }
+article { display: grid; align-content: start; gap: 10px; min-width: 0; padding: 22px; border: 1px solid var(--line); border-radius: 10px; }
+article h3, article p { margin: 0; }
+article a { justify-self: start; padding: 6px 0; }
+#music .grid + article { margin-top: 16px; }
+footer { padding: 25px 0 40px; border-top: 1px solid var(--line); }
+@media (max-width: 600px) {
+  header, main, footer { width: calc(100% - 28px); }
+  .hero { min-height: 330px; align-items: end; }
+  .hero img { object-position: 63% center; }
+  .hero::after { background: linear-gradient(0deg, #101629e8, #1016298c 43%, transparent 82%); }
+  .hero h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+}
+#games .game-card { display: block; padding: 0; min-width: 0; }
+.game-card a { display: block; width: 100%; padding: 0; border-radius: inherit; text-decoration: none; }
+.game-cover {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 9px 9px 0 0;
+}
+.game-thumbnail { display: block; width: 100%; height: 100%; object-fit: cover; }
+.omok-thumbnail { object-position: 50% 35%; }
+.grid-thumbnail { transform: rotate(-2deg) scale(1.35); transform-origin: 50% 53%; }
+.game-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 56px;
+  padding: 12px;
+}
+.game-caption h3 { font-size: clamp(.875rem, 1.5vw, 1.05rem); }
+.game-caption span { font-size: .75rem; white-space: nowrap; }
+.game-card a:hover .game-caption span { text-decoration: underline; }
+.snake-thumbnail { transform: scale(1.33); transform-origin: 58% 35%; }
+.music-player { min-width: 0; }
+.music-player summary {
+  position: relative;
+  display: grid;
+  align-items: end;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #112236;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+}
+.music-player summary::-webkit-details-marker { display: none; }
+.music-player summary:focus-visible { outline: 2px solid var(--navy); outline-offset: 4px; }
+.music-player img, .music-player summary::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.music-player img { object-fit: cover; }
+.music-player summary::after {
+  content: '';
+  background: linear-gradient(0deg, #0d1425da 0%, transparent 65%);
+}
+.music-player-label {
+  position: relative;
+  z-index: 1;
+  justify-self: start;
+  margin: 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #101629;
+  font-size: .85rem;
+  font-weight: 650;
+}
+.music-player:not([open]) .music-player-close, .music-player[open] .music-player-open { display: none; }
+.music-player iframe { display: block; margin-top: 10px; }
+.music-track { position: relative; min-width: 0; }
+.music-track > iframe { display: block; }
+.music-player-label { display: grid; gap: 3px; border-radius: 8px; }
+.music-player-label strong { font-size: 1rem; }
+.music-external:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.music-external:focus {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 2;
+  background: #fff8eb;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: .75rem;
+}
+.music-player-label { background: var(--player-button, #101629); color: #fffaf2; }
+.music-player summary:hover .music-player-label { box-shadow: 0 0 0 1px #fffaf2; }
+.music-track .music-player[open] + .music-external {
+  position: static;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-top: 7px;
+  padding: 0;
+  clip-path: none;
+  overflow: visible;
+  font-size: .72rem;
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="site-logo" href="https://yeonsungai27-art.github.io/"><img src="./zero-logo.png" width="534" height="131" alt="ZERO° 홈"></a>
+  <nav aria-label="주 메뉴"><a href="https://yeonsungai27-art.github.io/game/">게임</a><a href="#collection">음악</a></nav>
+</header>
+<main>
+  <div class="hero">
+    <div class="hero-copy">
+      <h1>BEYOND ZERO°</h1>
+      <p>서로 다른 무드의 음악 세 곡을 한곳에서 들어보세요.</p>
+    </div>
+    <img src="./afternoon-train.jpg" width="1536" height="1024" alt="오후 햇살이 드는 전철 안과 창밖으로 보이는 푸른 풍경">
+  </div>
+  <section id="collection" aria-labelledby="music-title">
+    <h2 id="music-title">음악</h2>
+    <p>커버를 눌러 곡의 재생기를 열어보세요.</p>
+    <div class="grid">
+      <div class="music-track">
+        <details class="music-player" style="--player-button: #174353">
+          <summary>
+            <img src="./neon-beon-cover.jpg" width="1536" height="1024" alt="" loading="lazy">
+            <span class="music-player-label"><strong>니온앤비온</strong><span class="music-player-open">▶ 재생기 열기</span><span class="music-player-close">재생기 접기</span></span>
+          </summary>
+          <iframe title="니온앤비온 재생" src="https://suno.com/embed/2019a760-1bf8-4d98-9e5d-8ee009673e99" width="100%" height="140" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" style="border: 0; border-radius: 8px"></iframe>
+        </details>
+        <a class="music-external" href="https://suno.com/s/H0R9I1YGjvfdmRvw">Suno에서 니온앤비온 열기 ↗</a>
+      </div>
+      <div class="music-track">
+        <details class="music-player" style="--player-button: #324f65">
+          <summary>
+            <img src="./happy-day-cover.jpg" width="1536" height="1024" alt="" loading="lazy">
+            <span class="music-player-label"><strong>행복한 날</strong><span class="music-player-open">▶ 재생기 열기</span><span class="music-player-close">재생기 접기</span></span>
+          </summary>
+          <iframe title="행복한 날 재생" src="https://suno.com/embed/c9e98bd3-45b9-42a6-9e78-d22071755870" width="100%" height="140" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" style="border: 0; border-radius: 8px"></iframe>
+        </details>
+        <a class="music-external" href="https://suno.com/s/4jGgCTSnwkrR3FJh">Suno에서 행복한 날 열기 ↗</a>
+      </div>
+      <div class="music-track">
+        <details class="music-player" style="--player-button: #644236">
+          <summary>
+            <img src="./all-day-cover.jpg" width="1536" height="1024" alt="" loading="lazy">
+            <span class="music-player-label"><strong>하루 종일</strong><span class="music-player-open">▶ 재생기 열기</span><span class="music-player-close">재생기 접기</span></span>
+          </summary>
+          <iframe title="하루 종일 재생" src="https://suno.com/embed/c26307bb-93f6-419c-be5b-fc388326cec2" width="100%" height="140" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" style="border: 0; border-radius: 8px"></iframe>
+        </details>
+        <a class="music-external" href="https://suno.com/s/9qtXiBr1Lt25OWPK">Suno에서 하루 종일 열기 ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><a href="https://yeonsungai27-art.github.io/">ZERO° 작품 모음으로 돌아가기 ↗</a></footer>
+</body>
+</html>
